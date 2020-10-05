@@ -56,7 +56,6 @@ class Particles {
 
 let circleArray = [];
 
-
 for (let i = 0; i < 150; i++) {
   let radius = 5;
   let x = Math.random() * (window.innerWidth - radius * 2) + radius;
@@ -64,16 +63,6 @@ for (let i = 0; i < 150; i++) {
   dx = (Math.random() - 0.5) * 5;
   dy = (Math.random() - 0.5) * 5;
   circleArray.push(new Particles(x, y, dx, dy, radius));
-
-for(let i=0; i<10; i++)
-{   
-let  radius = 50;
-let x = Math.random() * (window.innerWidth - radius * 2)+ radius;
-y = Math.random() * (window.innerHeight - radius * 2)+ radius;
-dx = (Math.random() - 0.9) * 5;
-dy = (Math.random() - 0.9) * 5;
-   circleArray.push(new Particles(x, y, dx, dy, radius));
->>>>>>> upstream/master
 }
 
 function animate() {
