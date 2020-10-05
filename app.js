@@ -1,13 +1,10 @@
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector("canvas");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-const c = canvas.getContext('2d');
-
+const c = canvas.getContext("2d");
 
 console.log(canvas);
-
-
 
 // canvas.addEventListener('mousemove', function(e)
 // {
@@ -16,8 +13,6 @@ console.log(canvas);
 //   c.strokeStyle =  `rgba(${Math.random() *255 },${Math.random() *255 } ,  ${Math.random() *255 }, 1)`;
 //   c.stroke();
 // });
-
-
 
 // canvas.addEventListener('click', function (e) {
 //   console.log(e);
@@ -31,7 +26,6 @@ console.log(canvas);
 // });
 
 class Particles {
-
   constructor(x, y, dx, dy, radius) {
     this.x = x;
     this.y = y;
@@ -41,18 +35,14 @@ class Particles {
   }
 
   draw() {
-
     c.fill();
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, 360, false);
-    c.strokeStyle = 'orange';
+    c.strokeStyle = "orange";
     c.stroke();
-
-
   }
 
   update() {
-
     if (this.x + this.radius > innerWidth || this.x - this.radius < 0)
       this.dx = -this.dx;
     if (this.y + this.radius > innerHeight || this.y - this.radius < 0)
@@ -61,35 +51,25 @@ class Particles {
     this.x += this.dx;
     this.y += this.dy;
     this.draw();
-
   }
-  
 }
-
-
-
-
-
-
 
 let circleArray = [];
 
-for(let i=0; i<10; i++)
-{   
-let  radius = 50;
-let x = Math.random() * (window.innerWidth - radius * 2)+ radius;
-y = Math.random() * (window.innerHeight - radius * 2)+ radius;
-dx = (Math.random() - 0.9) * 5;
-dy = (Math.random() - 0.9) * 5;
-   circleArray.push(new Particles(x, y, dx, dy, radius));
+for (let i = 0; i < 150; i++) {
+  let radius = 5;
+  let x = Math.random() * (window.innerWidth - radius * 2) + radius;
+  y = Math.random() * (window.innerHeight - radius * 2) + radius;
+  dx = (Math.random() - 0.5) * 5;
+  dy = (Math.random() - 0.5) * 5;
+  circleArray.push(new Particles(x, y, dx, dy, radius));
 }
 
 function animate() {
   requestAnimationFrame(animate);
   // c.clearRect(0, 0, innerWidth, innerHeight);
-  for( let i=0; i<circleArray.length; i++)
-  {
-      circleArray[i].update();
+  for (let i = 0; i < circleArray.length; i++) {
+    circleArray[i].update();
   }
 }
 
