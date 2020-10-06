@@ -35,6 +35,7 @@ h1 {
   text-shadow: 0.2rem 0.2rem 0.4rem blueviolet;
   font-size: 6rem;
   position: absolute;
+  color:white;
   top: 50;
   left: 60;
   z-index: 2;
@@ -46,56 +47,64 @@ h1 {
 @-webkit-keyframes colorchange {
   0% {
     
-    color: green;
+    text-shadow: 0.2rem 0.2rem 0.4rem green;
   }
   
   10% {
     
-    color: #8e44ad;
+    text-shadow: 0.2rem 0.2rem 0.4rem #8e44ad;
   }
   
   20% {
     
-    color: #1abc9c;
+    text-shadow: 0.2rem 0.2rem 0.4rem #1abc9c;
+
   }
   
   30% {
     
-    color: #d35400;
+    text-shadow: 0.2rem 0.2rem 0.4rem #d35400;
+
   }
   
   40% {
     
-    color: blue;
+    text-shadow: 0.2rem 0.2rem 0.4rem blue;
+  
   }
   
   50% {
     
-    color: #34495e;
+    text-shadow: 0.2rem 0.2rem 0.4rem #34495e;
+    
   }
   
   60% {
     
-    color:gold;
+    text-shadow: 0.2rem 0.2rem 0.4rem gold;
+  
   }
   
   70% {
     
-    color: #2980b9;
+    text-shadow: 0.2rem 0.2rem 0.4rem #2980b9;
+  
   }
   80% {
  
-    color: #f1c40f;
+    text-shadow: 0.2rem 0.2rem 0.4rem #f1c40f;
+  
   }
   
   90% {
  
-    color: #ca2bcf;
+    text-shadow: 0.2rem 0.2rem 0.4rem #ca2bcf;
+  
   }
   
   100% {
-    
-    color: pink;
+    text-shadow: 0.2rem 0.2rem 0.4rem pink;
+
   }
 }
 
