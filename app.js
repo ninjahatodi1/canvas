@@ -1,8 +1,11 @@
-const canvas = document.querySelector("canvas");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const c = canvas.getContext("2d");
+const canvas = document.querySelector('canvas');
+const setSizeOfCanvas = () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
+window.addEventListener('resize', setSizeOfCanvas);
+setSizeOfCanvas();
+const c = canvas.getContext('2d');
 
 console.log(canvas);
 
@@ -38,7 +41,7 @@ class Particles {
     c.fill();
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, 360, false);
-    c.strokeStyle = "orange";
+    c.strokeStyle = 'orange';
     c.stroke();
   }
 
