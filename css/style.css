@@ -33,13 +33,72 @@ h1 {
   font-family: "Piazzolla", serif;
   font-weight: 900;
   text-shadow: 0.2rem 0.2rem 0.4rem blueviolet;
-  color: white;
   font-size: 6rem;
   position: absolute;
   top: 50;
   left: 60;
   z-index: 2;
+  -webkit-animation:colorchange 20s infinite alternate;
 }
+
+
+
+@-webkit-keyframes colorchange {
+  0% {
+    
+    color: green;
+  }
+  
+  10% {
+    
+    color: #8e44ad;
+  }
+  
+  20% {
+    
+    color: #1abc9c;
+  }
+  
+  30% {
+    
+    color: #d35400;
+  }
+  
+  40% {
+    
+    color: blue;
+  }
+  
+  50% {
+    
+    color: #34495e;
+  }
+  
+  60% {
+    
+    color:gold;
+  }
+  
+  70% {
+    
+    color: #2980b9;
+  }
+  80% {
+ 
+    color: #f1c40f;
+  }
+  
+  90% {
+ 
+    color: #ca2bcf;
+  }
+  
+  100% {
+    
+    color: pink;
+  }
+}
+
 
 @media (max-width: 500px) {
   h1 {
